@@ -32,14 +32,14 @@ This is a front-end and back-end separation project. It initially requires two p
 <div align=center><img src="documentation/images/1-2.png"></div>
 <p align=center>Product filter search function</p><br>
 
-<div align=center><img src="documentation/images/1-3.png"></div>
+<div align=center><img src="documentation/images/1-3.png" width="50%"></div>
 <p align=center>Home page responsive</p><br>
 
 2. Product detail page
 <div align=center><img src="documentation/images/2-1.png"></div>
 <p align=center>Product detail page</p><br>
 
-<div align=center><img src="documentation/images/2-2.png"></div>
+<div align=center><img src="documentation/images/2-2.png" width="50%"></div>
 <p align=center>Product detail page responsive</p><br>
 
 3. Add product page
