@@ -4,12 +4,15 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const path = require('path');
 
 // create an instance of Express app
 const app = express();
 
 // configure middleware
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'dist')));
+
 const ProductModel = require('./model/Product');
 
 // deal with cross origin
@@ -51,15 +54,15 @@ mongoose.connect('mongodb://localhost:27017/catalogue', { useNewUrlParser: true,
         console.error(`Error connecting to the MongoDB: ${err}`);
     });
 
-// server initial page
-app.get('/', (req, res) => {
-    res.send('<h1>Welcome to the product catalogue server!<h1>');
-});
-
 // define routes using separate module
 var productRouter = require('./controller/productController').router;
 
 app.use('/api/product', productRouter);
+
+// redirect vue page
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
 
 // client port
 const PORT = process.env.PORT || '8080';
