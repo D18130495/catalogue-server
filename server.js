@@ -62,7 +62,7 @@ var productRouter = require('./controller/productController').router;
 app.use('/api/product', productRouter);
 
 // client port
-const PORT = process.env.PORT || '8000';
+const PORT = process.env.PORT || '8080';
 
 // listen to the client port
 var listener = app.listen(PORT, () => {

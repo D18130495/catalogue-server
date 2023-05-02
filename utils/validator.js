@@ -16,26 +16,23 @@ function idValidator(id) {
     return true;
 }
 
-// validate if the name is exist
-function nameValidator(colorId, name) {
-    // read file
-    colours = JSON.parse(fs.readFileSync('./json/colours.json', 'utf8'));
-
-    // check the name
-    for(let i = 0; i < colours.length; i++) {
-        if(colours[i].colorId === colorId) {
-            continue;
-        }
-        
-        if(colours[i].name === name) {
-          return true;
-        }
-    }
-
+// validate if the input is number
+function numberValidator(id) {
+  // check if id is empty or not a number
+  if(!id || isNaN(id)) {
     return false;
+  }
+
+  // check if id is a positive number
+  const idNumber = parseFloat(id);
+  if(idNumber < 0) {
+    return false;
+  }
+
+  return true;
 }
 
 module.exports = {
     idValidator: idValidator,
-    nameValidator: nameValidator
+    numberValidator: numberValidator
 };

@@ -15,33 +15,13 @@ const status = {
         status: 210,
         statusName: "Invalid id"
     },
-    NAME_EXIST: {
+    INVALID_PAGE: {
         status: 211,
-        statusName: "Colour name exist"
+        statusName: "Page value is invalid"
     },
-    INVALID_HEX: {
+    INVALID_INPUT: {
         status: 212,
-        statusName: "Invalid hex"
-    },
-    INVALID_RGB: {
-        status: 213,
-        statusName: "Invalid rgb"
-    },
-    INVALID_HSL: {
-        status: 214,
-        statusName: "Invalid hsl"
-    },
-    COLOUR_NOT_MATCH: {
-        status: 215,
-        statusName: "Colour not match"
-    },
-    EMPTY_COLOUR_NAME: {
-        status: 216,
-        statusName: "Colour name is empty"
-    },
-    COLOUR_EXIST: {
-        status: 217,
-        statusName: "Colour is exist"
+        statusName: "Invalid input"
     },
     BAD_REQUEST: {
         status: 400,
